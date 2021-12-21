@@ -1,7 +1,7 @@
 //const { Router } = require('express');
 import { Router } from 'express'
 import fs from 'fs';
-// import Blog from '../class/Blog';
+import Blog from '../class/Blog';
 
 const routers = Router();
 
