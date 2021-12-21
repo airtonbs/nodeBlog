@@ -1,5 +1,5 @@
 export default class Blog {
-    public id : number = 1;
+    id = 1;
 
     constructor() {
         console.log(this.id)

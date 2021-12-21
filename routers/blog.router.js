@@ -1,7 +1,7 @@
 //const { Router } = require('express');
 import { Router } from 'express'
 import fs from 'fs';
-import Blog from '../class/Blog';
+// import Blog from '../class/Blog';
 
 const routers = Router();
 
@@ -50,8 +50,8 @@ routers.get('/token/:id', (req, res) => {
     let obj = {};
     let texto = "";
 
-    let teste = new Blog(2);
-
+    let importando = new Blog;
+    importando(2);
 
     if (fs.existsSync(`./blog/blog`)) {
         dadosBlog = JSON.parse(fs.readFileSync(`./blog/blog`));
