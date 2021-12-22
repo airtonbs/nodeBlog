@@ -1,6 +1,5 @@
 //const { Router } = require('express');
 import { Router } from 'express'
-import fs from 'fs';
 import Blog from '../class/Blog';
 
 const routers = Router();
@@ -45,23 +44,8 @@ routers.post('/:id', (req, res) => {
 });
 
 routers.get('/token/:id', (req, res) => {
-    let dadosBlog = [];
-    let msg = {};
-    let obj = {};
-    let texto = "";
-
-    let importando = new Blog;
-    importando(2);
-
-    if (fs.existsSync(`./blog/blog`)) {
-        dadosBlog = JSON.parse(fs.readFileSync(`./blog/blog`));
-        (dadosBlog.length == 1) ? texto = dadosBlog.length + " registro encontrado!": texto = dadosBlog.length + " registros encontrados!";
-        msg = { "msg": texto }
-    } else {
-        msg = { "msg": "Registros não encontrados!" };
-    }
-    obj = {... { "Blog": dadosBlog }, ...msg };
-    res.send(obj);
+    let getBlog = new Blog;
+    res.send(getBlog);
 });
 
 // Requisições com parâmetro fixo via get

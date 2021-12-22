@@ -1,7 +1,19 @@
+import EncapsulamentoBlog from '../encapsulamento/EncapsulamentoBlog';
+import MenssageBlog from '../message/MessageBlog';
 export default class Blog {
-    id = 1;
+
+    msg = {};
+    obj = {};
 
     constructor() {
-        console.log(this.id)
+
+        let dadosBlog = new EncapsulamentoBlog;
+        this.obj = dadosBlog;
+        // console.log(this.obj)
+
+        return this.obj;
     }
+
+
+
 }
