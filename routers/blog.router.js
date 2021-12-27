@@ -25,7 +25,7 @@ routers.get('/token/:id', (req, res) => {
 // Requisições com parâmetro fixo via get
 routers.get('/id/:id', (req, res) => {
     var token = parseInt(req.params.id);
-    console.log(token)
+    // console.log(token)
     var id = req.body.id;
     var obj = new Blog;
 

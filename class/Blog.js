@@ -8,9 +8,12 @@ export default class Blog {
     }
 
     getBlog() {
+
+        let erro = { "erro": "" };
         let dadosBlog = new EncapsulamentoBlog;
         this.obj = dadosBlog.getBlog();
 
+        this.obj = {...this.obj, ...erro }
         return this.obj;
     }
 
